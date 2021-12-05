@@ -1,0 +1,11 @@
+:root {
+    --background: #363636; 
+    --text: white;
+    --border: rgb(58, 214, 58);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    border-color: var(--border);
+}
