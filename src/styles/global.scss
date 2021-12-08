@@ -1,11 +1,27 @@
+@font-face {
+    font-family: 'pottato-one';
+    src: url(../fonts/PottaOne-Regular.ttf);
+  }
+
 :root {
     --background: #363636; 
     --text: white;
     --border: rgb(58, 214, 58);
+    --green: rgb(89, 233, 89);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
+    font-family: "pottato-one";
     background-color: var(--background);
     color: var(--text);
     border-color: var(--border);
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }

@@ -1,0 +1,30 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    p {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+    .actions {
+        display: flex;
+        width: 35%;
+        gap: 10px;
+        flex: 0 0 50px;
+        justify-content: space-between;
+        
+        button {
+            border: none;
+            background-color: var(--green);
+            color: white;
+            border-radius: 10px;
+            min-width: 100px;
+            cursor: pointer;
+        }
+    }
+}
