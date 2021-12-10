@@ -24,3 +24,13 @@ export class Observable implements ObservableI {
     }
 
 }
+
+export const createState = (state: object, observe: (newState: object) => void) => {
+
+    const observable = new Observable(state, observe)
+
+    return {
+        state,
+        setState: observable.getMutator().mutate        
+    }
+}

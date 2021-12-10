@@ -1,17 +1,22 @@
 import { 
-    Observable,
+    createState,
     Renderer,
     relocate
  } from "../modules"
 
 export const GameView = () => {
-    const stateObj = {
-        a: 1
-    }
-    const state = new Observable(stateObj, (newState) => {
+    const { state, setState } = createState({
+        a:1 
+    }, (newState) => {
         console.log({ newState })
     })
-    const setState = state.getMutator().mutate
+    
+
+    setTimeout(() => {
+        setState({
+            a: 10
+        })
+    }, 3000)
     
 
 

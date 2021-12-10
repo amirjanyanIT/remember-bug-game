@@ -1,4 +1,4 @@
-export { Observable } from './observable'
+export { Observable, createState } from './observable'
 export {
     Renderer,
     relocate
