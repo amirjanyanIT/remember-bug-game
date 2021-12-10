@@ -54,6 +54,7 @@ export class Renderer implements RendererI {
             this.onDestroy()
         }
     }
+    
 }
 
 export { relocate } from './relocate'

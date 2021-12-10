@@ -1,4 +1,4 @@
-import { Renderer } from "../modules/renderer"
+import { Renderer, relocate } from "../modules/renderer"
 
 
 export const MenuView = () => {
@@ -17,20 +17,14 @@ export const MenuView = () => {
         startButton: () => document.querySelector(`.${menuView.id} .menu .actions .start-button`),
         settingsButton: () => document.querySelector(`.${menuView.id} .menu .actions .settings-button`),
         handlers: {
-            startButton: () => {
-                console.log(1)
-            },
-            settingsButton: () => {
-                console.log(2)
-            }
+            startButton: () => relocate('game'),
+            settingsButton: () => relocate('settings')
         }
     }
 
     menuView.onInit = () => {
         domElements.startButton()?.addEventListener('click', domElements.handlers.startButton)
         domElements.settingsButton()?.addEventListener('click', domElements.handlers.settingsButton)
-
-
     }
 
     menuView.onDestroy = () => {

@@ -4,5 +4,4 @@ import "./styles/board.scss"
 
 import { initializeViews } from './views'
 
-
 initializeViews()
